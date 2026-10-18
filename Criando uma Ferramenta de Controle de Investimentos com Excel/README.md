@@ -8,111 +8,85 @@ A planilha permite calcular o patrimônio acumulado a partir de aportes mensais 
 
 O projeto foi desenvolvido como parte de um desafio prático da [DIO](https://www.dio.me/), com foco na aplicação de fórmulas, organização de dados e construção de uma ferramenta voltada à resolução de um problema de negócio.
 
-## 🎯 Objetivos
+## 1. Perguntas de negócio
 
-Desenvolver uma ferramenta que permita responder às seguintes perguntas:
+A ferramenta foi desenvolvida para responder às seguintes perguntas:
 
-- Quanto investir mensalmente?
-- Por quantos anos investir?
-- Qual será o rendimento mensal estimado?
-- Qual patrimônio poderá ser acumulado ao longo do tempo?
-- Quanto esse patrimônio poderá gerar em dividendos mensais?
+- **Quanto investir por mês:** valor do aporte mensal informado pelo usuário.
+- **Por quantos anos investir:** período escolhido para a simulação.
+- **Qual a taxa de rendimento mensal:** percentual de rendimento estimado para a carteira.
+- **Quanto de patrimônio será acumulado:** valor futuro estimado ao final do período de investimento.
+- **Quanto será recebido em dividendos mensais:** estimativa de dividendos calculada com base no patrimônio acumulado e na taxa de distribuição mensal utilizada.
 
-## ⚙️ Funcionalidades
+As respostas são apresentadas na planilha, junto às configurações e aos resultados da simulação.
 
-- Simulação de investimentos com aportes mensais.
-- Cálculo do patrimônio futuro com a função `VF` do Excel.
-- Estimativa de dividendos mensais com base no patrimônio acumulado e na taxa de distribuição considerada.
-- Projeção de cenários para 2, 5, 10, 20 e 30 anos.
-- Sugestão de aporte mensal equivalente a 30% do salário informado.
-- Distribuição dos aportes entre seis tipos de fundos imobiliários.
-- Seleção de perfil de investidor por meio de uma lista suspensa.
-- Consulta de percentuais de alocação com `PROCV` e chave composta.
-
-## 🧮 Fórmulas e conceitos aplicados
+## 2. Fórmulas utilizadas
 
 ### Função VF
 
-A função `VF` (Valor Futuro) é utilizada para estimar o patrimônio acumulado ao longo do período de investimento, considerando uma taxa de rendimento e aportes periódicos.
+A função `VF` (Valor Futuro) é utilizada para calcular o patrimônio acumulado ao longo do período de investimento, considerando a taxa de rendimento, os aportes periódicos e o prazo escolhido.
 
-Ela permite simular como contribuições mensais podem crescer ao longo do tempo.
+Ela também permite projetar diferentes cenários de investimento para **2, 5, 10, 20 e 30 anos**, facilitando a comparação dos resultados ao longo do tempo.
 
 ### Função PROCV e chave composta
 
-A função `PROCV` é utilizada para localizar o percentual de alocação correspondente ao perfil de investidor e ao tipo de fundo imobiliário selecionados.
+A função `PROCV` é utilizada para buscar o percentual de alocação correspondente ao perfil de investidor e ao tipo de fundo imobiliário.
 
-Para isso, uma chave composta combina essas duas informações, permitindo identificar a distribuição adequada para cada combinação de perfil e categoria de fundo.
+Para isso, é utilizada uma chave composta que combina o perfil e o tipo de FII, como `Conservador-PAPEL`. Essa chave permite localizar o percentual correto na tabela auxiliar e calcular a distribuição do aporte mensal.
 
-### Intervalos nomeados
+## 3. Intervalos nomeados
 
-Os intervalos nomeados tornam as fórmulas mais legíveis e facilitam a manutenção da planilha.
+Os intervalos nomeados facilitam a leitura das fórmulas e a manutenção da planilha.
 
-Intervalos previstos no projeto:
+| Intervalo nomeado | Finalidade |
+|---|---|
+| `aporte` | Representa o valor do aporte mensal. |
+| `taxa_mensal` | Representa a taxa de rendimento mensal estimada. |
 
-- `aporte`: valor investido mensalmente.
-- `taxa_mensal`: taxa de rendimento mensal estimada.
+## 4. Perfis e percentuais de alocação
 
-Outros intervalos poderão ser adicionados conforme a implementação.
+A ferramenta permite selecionar um entre três perfis de investidor: Conservador, Moderado e Agressivo. Cada perfil possui uma distribuição percentual entre seis tipos de fundos imobiliários.
 
-## 👤 Perfis de investidor
+### Distribuição dos aportes
 
-A ferramenta utiliza uma tabela auxiliar para definir a distribuição percentual dos aportes entre seis tipos de fundos imobiliários, de acordo com o perfil selecionado.
+| Tipo de FII | Conservador | Moderado | Agressivo |
+|---|---:|---:|---:|
+| PAPEL | 30% | 32% | 50% |
+| TIJOLO | 50% | 40% | 10% |
+| HÍBRIDOS | 10% | 8% | 5% |
+| FOFs | 10% | 0% | 5% |
+| DESENVOLVIMENTO | 0% | 10% | 20% |
+| HOTELARIAS | 0% | 10% | 10% |
+| **Total** | **100%** | **100%** | **100%** |
 
-Os percentuais serão documentados após a definição da tabela de alocação. Cada perfil deverá totalizar 100%.
+Os percentuais foram definidos com base na tabela de alocação utilizada no simulador, seguindo o modelo didático do desafio da DIO. Cada perfil totaliza 100%, garantindo que todo o aporte seja distribuído entre as categorias apresentadas.
 
-**Origem dos percentuais:** [preencher com os critérios utilizados e informar se foram adaptados do exemplo apresentado no desafio da DIO].
+## 5. Alterações em relação à ferramenta do Expert
 
-As distribuições têm finalidade didática e não constituem recomendação de investimento.
+[Descrever as alterações realizadas em relação à ferramenta apresentada pelo Expert Felipe Aguiar, como melhorias visuais, gráficos, novas simulações ou funcionalidades adicionais.]
 
-## 🛠️ Tecnologias e ferramentas
+## 6. Evidências de funcionamento
 
-- Microsoft Excel
-- Fórmulas financeiras e funções de pesquisa
-- Validação de dados
-- Intervalos nomeados
-- Tabelas auxiliares
-- Visualização e organização de dados
+### Simulação com perfil Conservador
 
-## 📈 Resultados e demonstração
+[Inserir print da planilha preenchida com o perfil Conservador.]
 
-Esta seção será atualizada após a conclusão da planilha.
+### Simulação com perfil Agressivo
 
-Serão incluídas capturas de tela demonstrando:
+[Inserir print da planilha preenchida com o perfil Agressivo.]
 
-- A tela principal do simulador preenchida com valores fictícios.
-- As projeções de patrimônio e dividendos.
-- A alteração da distribuição dos aportes ao trocar o perfil de investidor.
-
-## 💡 Aprendizados
-
-O desenvolvimento deste projeto permite praticar:
-
-- Tradução de perguntas de negócio em cálculos e indicadores.
-- Aplicação de fórmulas financeiras no Excel.
-- Organização e consulta de dados por meio de tabelas auxiliares.
-- Uso de referências absolutas e intervalos nomeados.
-- Validação de dados para tornar a ferramenta mais interativa.
-- Construção de uma interface simples e intuitiva para o usuário.
-- Análise de cenários para apoiar a tomada de decisão.
-
-## 🚀 Melhorias futuras
-
-- Criar um gráfico de pizza dinâmico para visualizar a distribuição dos aportes.
-- Implementar uma simulação automática com aporte equivalente a 30% do salário.
-- Adicionar novos cenários de investimento.
-- Aprimorar a interface para facilitar a utilização da ferramenta.
-- Incluir comparações visuais entre diferentes perfis de investidor.
+As capturas de tela devem demonstrar a mesma simulação nos dois perfis, evidenciando como a seleção altera a distribuição percentual dos aportes entre os tipos de fundos imobiliários.
 
 ## ⚠️ Aviso
 
 Este simulador possui finalidade exclusivamente educacional. Os resultados são estimativas matemáticas baseadas nos parâmetros informados e não representam garantia de rentabilidade futura.
 
-Fundos imobiliários apresentam riscos, e os dividendos podem variar ao longo do tempo. Os perfis e percentuais de alocação são exemplos didáticos, não recomendações financeiras.
+Os rendimentos e dividendos dos fundos imobiliários podem variar, e o investimento está sujeito a riscos. Os perfis e percentuais apresentados são exemplos didáticos e não constituem recomendações de investimento.
 
 ## 📚 Créditos
 
-Projeto desenvolvido como desafio prático de Excel da [Digital Innovation One (DIO)](https://www.dio.me/), com base nas orientações e nos conteúdos apresentados pelo expert Felipe Aguiar.
+Projeto desenvolvido como parte do desafio prático de Excel da **Digital Innovation One (DIO)**, com base nas orientações e nos conteúdos apresentados pelo expert **Felipe Aguiar (Felipão)**.
 
----
+[Digital Innovation One — DIO](https://www.dio.me/)
 
-**Status do projeto:** Em desenvolvimento.
+[Planilha de referência do Expert](https://hermes.dio.me/files/assets/a04b81b1-8e35-4e72-aeb9-98aed8ed4403.xlsx)
