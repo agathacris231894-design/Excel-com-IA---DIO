@@ -1,8 +1,8 @@
-# 📊 Bootcamp DIO — Excel do Básico à Inteligência Artificial
+# 📊 Bootcamp DIO — Santander - Excel com IA e Claude
 
 ## 📌 Sobre o bootcamp
 
-Bootcamp da [Digital Innovation One (DIO)](https://www.dio.me/) voltado ao aprendizado de Microsoft Excel, desde os conceitos fundamentais até a aplicação de fórmulas, tratamento e visualização de dados em relatórios, com apoio de ferramentas de Inteligência Artificial.
+Bootcamp da [Digital Innovation One (DIO)](https://www.dio.me/) com apoio da empresa Santander voltado ao aprendizado de Microsoft Excel, desde os conceitos fundamentais até a aplicação de fórmulas, tratamento e visualização de dados em relatórios, com apoio de ferramentas de Inteligência Artificial.
 
 A formação combina conteúdos teóricos, exercícios práticos e desafios de projeto para desenvolver habilidades aplicáveis a problemas reais do mercado de trabalho.
 
