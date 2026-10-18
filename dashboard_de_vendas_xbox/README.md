@@ -2,26 +2,26 @@
 
 ## 📌 Sobre o Projeto
 
-Desenvolvimento de um dashboard de vendas no Microsoft Excel para transformar dados brutos em informações visuais claras, facilitando a análise de desempenho e a tomada de decisões baseadas em dados.
+Desenvolvimento de um dashboard de vendas no Microsoft Excel para transformar dados brutos em informações visuais, facilitando a análise de desempenho e a tomada de decisões baseadas em dados.
 
-## 🎯 Objetivos
+## 🛠️ Tecnologias e Metodologia
 
-- Organizar e visualizar dados de vendas;
-- Facilitar a análise de indicadores;
-- Apoiar a tomada de decisões.
-
-## 🛠️ Tecnologias
-
-- Microsoft Excel
-- Git e GitHub
+- **Microsoft Excel:** organização, cálculos e visualização de dados.
+- **Git e GitHub:** versionamento e documentação do projeto.
+- **Método ABCDE:** estruturação do projeto em cinco etapas:
+  - **A — Assets:** elementos e recursos visuais;
+  - **B — Bases:** organização dos dados;
+  - **C — Cálculos:** processamento e análise das informações;
+  - **D — Dashboards:** criação dos painéis visuais;
+  - **E — Extras:** recursos complementares.
 
 ## 📈 Resultados
 
-Dashboard para visualização e análise do desempenho de vendas, permitindo identificar informações relevantes de forma prática e organizada.
+Dashboard organizado e estruturado pelo método ABCDE, permitindo visualizar informações relevantes e facilitar a análise do desempenho de vendas.
 
 ## ⚠️ Observações
 
-Projeto desenvolvido para fins educacionais, como parte de um desafio prático. Os dados e indicadores apresentados dependem da base utilizada no dashboard.
+Projeto desenvolvido para fins educacionais, como parte de um desafio prático. Os resultados dependem dos dados utilizados na construção do dashboard.
 
 ## 👨‍🏫 Créditos
 
